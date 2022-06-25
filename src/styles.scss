@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$screen-large: 999px;
+$screen-medium: 470px;
+
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --ig-elevated-separator: 219, 219, 219;
+  --ig-primary-background: 255, 255, 255;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.main-container {
+  margin: 75px auto 0;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: $screen-medium) {
+  .container {
+    max-width: 470px;
+  }
+}
+
+@media only screen and (min-width: $screen-large) {
+  .container {
+    max-width: 821px;
+  }
+}

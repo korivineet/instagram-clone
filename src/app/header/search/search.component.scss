@@ -1,0 +1,33 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 36px;
+  min-width: 125px;
+  width: 268px;
+  position: relative;
+}
+
+input {
+  background-color: rgb(239, 239, 239);
+  border: 0;
+  padding: 3px 16px;
+  outline: none;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-family);
+}
+
+.placeholder-content {
+  position: absolute;
+  left: 12px;
+  display: flex;
+  color: #8e8e8e;
+}
+
+.search-icon-container {
+  .search-icon {
+    margin-right: 12px;
+  }
+}
