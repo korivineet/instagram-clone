@@ -1,11 +1,19 @@
+@import 'variables';
+
 .input-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 36px;
-  min-width: 125px;
-  width: 268px;
-  position: relative;
+  display: none;
+}
+
+@media only screen and (min-width: $screen-hide-searchbar) {
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 36px;
+    min-width: 125px;
+    width: 268px;
+    position: relative;
+  }
 }
 
 input {
