@@ -1,0 +1,25 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-container {
+  margin-bottom: 24px;
+}
+
+.link {
+  color: rgb(var(--ig-tertiary-text));
+  font-size: 0.75rem;
+}
+
+.link::after {
+  content: '\00B7';
+  margin: 0 0.25rem;
+}
+
+.copyright {
+  p {
+    color: rgb(var(--ig-tertiary-text));
+    font-size: 0.75rem;
+  }
+}

@@ -1,15 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-$screen-large: 999px;
-$screen-medium: 470px;
+@import 'variables';
 
 :root {
   --font-family: 'Roboto', sans-serif;
   --ig-elevated-separator: 219, 219, 219;
   --ig-primary-background: 255, 255, 255;
-
+  --ig-primary-text: 38, 38, 38;
+  --ig-secondary-text: 142, 142, 142;
+  --ig-tertiary-text: 199, 199, 199;
+  --ig-primary-button: 0, 149, 246;
+  --feed-sidebar-width: 319px;
+  --feed-main-width: 470px;
 }
 
 * {
@@ -21,6 +25,11 @@ body {
   font-family: var(--font-family);
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(var(--ig-primary-button));
 }
 
 .main-container {

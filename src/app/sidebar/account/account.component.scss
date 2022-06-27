@@ -1,0 +1,40 @@
+.user-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture-container {
+  width: 50px;
+  margin-right: 12px;
+  img {
+    width: 100%;
+  }
+}
+
+.profile-content {
+  p {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+  .username {
+    a {
+      font-weight: 500;
+      text-decoration: none;
+      color: rgb(var(--ig-primary-text));
+    }
+  }
+  .full-name {
+    color: rgb(var(--ig-secondary-text));
+  }
+}
+
+.switch {
+  font-size: 0.75rem;
+  font-weight: 500;
+}

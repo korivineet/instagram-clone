@@ -23,6 +23,7 @@ nav {
   flex: 1 0 127px;
   .logo {
     width: 100px;
+    margin-top: 6px;
   }
 }
 
@@ -33,7 +34,7 @@ nav {
 .right {
   flex: 1 0 127px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 
   a {
     margin-left: 22px;

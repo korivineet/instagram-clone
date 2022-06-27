@@ -1,0 +1,12 @@
+@import 'variables';
+
+.sidebar-container {
+  display: none;
+  max-width: var(--feed-sidebar-width);
+}
+
+@media only screen and (min-width: $screen-large) {
+  .sidebar-container {
+    display: block;
+  }
+}

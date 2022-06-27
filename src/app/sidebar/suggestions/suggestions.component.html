@@ -1,0 +1,26 @@
+<div class="suggestions">
+  <p>Suggestions For You</p>
+  <a routerLink="/explore/people">See All</a>
+</div>
+
+<div class="user-container" *ngFor="let user of users">
+  <div class="profile-container">
+    <div class="profile-picture-container">
+      <img src="{{ user.profilePictureUrl }}" alt="{{ user.username + ' profile photo' }}">
+    </div>
+    <div class="profile-content">
+      <p class="username">
+        <a routerLink="{{ user.username}}">
+          {{ user.username }}
+        </a>
+      </p>
+      <p class="full-name">
+        {{ user.fullName }}
+      </p>
+    </div>
+  </div>
+  <div>
+    <a href="#" class="switch">Follow</a>
+  </div>
+</div>
+
