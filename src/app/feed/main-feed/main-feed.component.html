@@ -1,1 +1,5 @@
-<p>main-feed works!</p>
+<div class="feed-container">
+  <div *ngFor="let post of posts">
+    <app-post [post]="post"></app-post>
+  </div>
+</div>
