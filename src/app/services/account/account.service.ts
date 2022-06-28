@@ -7,8 +7,8 @@ import { Account } from './account.model';
 })
 export class AccountService {
 
-  user!: Account;
-  users: Account[] = [];
+  private user!: Account;
+  private users: Account[] = [];
 
   constructor() { 
     this.user = new Account(

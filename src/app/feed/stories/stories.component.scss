@@ -1,0 +1,25 @@
+.stories-container {
+  display: flex;
+  border-radius: 8px;
+  background: rgb(var(--ig-primary-background));
+  border: 1px solid rgb(var(--ig-elevated-separator));
+}
+
+.username-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 74px;
+  margin: 24px 6px;
+  .photo {
+    img {
+      height: 66px;
+      width: 66px;
+    }
+  }
+  .username {
+    font-size: 0.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
