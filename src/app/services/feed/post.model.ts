@@ -35,3 +35,13 @@ export class Post {
     this.location = location;
   }
 }
+
+export class Comment {
+  poster: Account;
+  content: string;
+
+  constructor(poster: Account, content: string) {
+    this.poster = poster;
+    this.content = content;
+  }
+}

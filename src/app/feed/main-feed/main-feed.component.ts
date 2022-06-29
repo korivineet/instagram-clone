@@ -13,18 +13,18 @@ export class MainFeedComponent implements OnInit, OnDestroy {
 
   posts: Post[] = [];
 
-  postSub = new Subscription();
+  postsSub = new Subscription();
 
   constructor(private feedService: FeedService) { }
 
   ngOnInit(): void {
     this.posts = this.feedService.getPosts();
-    this.postSub = this.feedService.postChanged$.subscribe(posts => {
-      this.posts = posts;
-    })
+    // this.postsSub = this.feedService.postChanged$.subscribe(posts => {
+    //   this.posts = posts;
+    // });
   }
 
   ngOnDestroy(): void {
-    this.postSub.unsubscribe();
+    this.postsSub.unsubscribe();
   }
 }

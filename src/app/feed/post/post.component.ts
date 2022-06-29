@@ -15,8 +15,7 @@ export class PostComponent implements OnInit {
 
   constructor(private feedService: FeedService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   onToggleLike() {
     this.post.likedByUser = !this.post.likedByUser;

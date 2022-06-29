@@ -15,7 +15,7 @@ export class SuggestionsComponent implements OnInit {
   constructor(private accountService: AccountService) { }
 
   ngOnInit(): void {
-    this.users = this.accountService.getUsers();
+    this.users = this.accountService.getSuggestedUsers();
   }
 
 }

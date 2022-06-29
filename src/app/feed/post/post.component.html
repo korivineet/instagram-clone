@@ -53,10 +53,12 @@
     </p>
   </div>
 
-  <div class="comments-container">
-    <p>
-      View all {{ post.comments.length }} comments
-    </p>
+  <div class="comments-container" *ngIf="post.comments.length > 0">
+    <a [routerLink]="['/p', post.id]">
+      <p>
+        View all {{ post.comments.length }} comments
+      </p>
+    </a>
   </div>
 
   <div class="time-container">
