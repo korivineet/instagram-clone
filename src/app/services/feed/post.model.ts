@@ -8,6 +8,7 @@ export class Post {
   comments: string[];
   timestamp: string;
   saved: boolean;
+  likedByUser: boolean;
   location?: string;
 
   constructor(
@@ -27,6 +28,7 @@ export class Post {
     this.comments = comments;
     this.timestamp = timestamp;
     this.saved = saved;
+    this.likedByUser = false;
     this.location = location;
   }
 }

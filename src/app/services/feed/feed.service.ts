@@ -21,7 +21,8 @@ export class FeedService {
     this.stories.push(new Story('vineetkori', 'https://i.imgur.com/MaGtVJW.jpeg'));
     this.stories.push(new Story('vineetkori', 'https://i.imgur.com/MaGtVJW.jpeg'));
 
-    this.posts.push(new Post(new Account('Vineet Kori', 'vineetkori', 'https://i.imgur.com/MaGtVJW.jpeg'), 'https://i.imgur.com/C79fyRV.jpeg', 23, 'My drawing!', ['Very nice!', 'Love the painting!'], '1 HOUR AGO', false));
+    // TODO make followers and publish thier data for feed
+    this.posts.push(new Post(new Account('xdSK85Tgsd', 'Vineet Kori', 'vineetkori', 'https://i.imgur.com/MaGtVJW.jpeg'), 'https://i.imgur.com/C79fyRV.jpeg', 23, 'My drawing!', ['Very nice!', 'Love the painting!'], '1 HOUR AGO', false));
   }
 
   getStories(): Story[] {

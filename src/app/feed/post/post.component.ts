@@ -16,4 +16,12 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onToggleLike() {
+    this.post.likedByUser = !this.post.likedByUser;
+  }
+
+  onPhotoDblClicked() {
+    this.post.likedByUser = true;
+  }
+
 }
