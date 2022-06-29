@@ -5,10 +5,12 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SidebarModule } from '../sidebar/sidebar.module';
 import { FeedModule } from '../feed/feed.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { FeedModule } from '../feed/feed.module';
     FeedModule
   ],
   exports: [
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ]
 })
 export class HomeModule { }
