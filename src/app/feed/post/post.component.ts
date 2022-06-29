@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 import { Post } from './../../services/feed/post.model';
+import { FeedService } from './../../services/feed/feed.service';
 
 @Component({
   selector: 'app-post',
@@ -11,7 +13,7 @@ export class PostComponent implements OnInit {
 
   @Input() post!: Post;
 
-  constructor() { }
+  constructor(private feedService: FeedService) { }
 
   ngOnInit(): void {
   }
@@ -24,4 +26,9 @@ export class PostComponent implements OnInit {
     this.post.likedByUser = true;
   }
 
+  onSubmitComment(ngForm: NgForm) {
+    const comment = ngForm.form.value.comment;
+    this.feedService.addComment(this.post.id, comment);
+    ngForm.reset();
+  }
 }

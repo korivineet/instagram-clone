@@ -1,6 +1,7 @@
 import { Account } from "../account/account.model";
 
 export class Post {
+  id: string;
   account: Account;
   photoUrl: string;
   likes: number;
@@ -12,6 +13,7 @@ export class Post {
   location?: string;
 
   constructor(
+    id: string,
     account: Account,
     photoUrl: string,
     likes: number,
@@ -21,6 +23,7 @@ export class Post {
     saved: boolean,
     location?: string
   ) {
+    this.id = id;
     this.account = account;
     this.photoUrl = photoUrl;
     this.likes = likes;

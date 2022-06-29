@@ -7,6 +7,7 @@
 :root {
   --font-family: 'Roboto', sans-serif;
   --ig-elevated-separator: 219, 219, 219;
+  --post-separator: 239, 239, 239;
   --ig-primary-background: 255, 255, 255;
   --ig-secondary-background: 250, 250, 250;
   --ig-primary-text: 38, 38, 38;
@@ -31,6 +32,10 @@ body {
 a {
   text-decoration: none;
   color: rgb(var(--ig-primary-button));
+}
+
+textarea {
+  font-family: var(--font-family);
 }
 
 .main-container {
