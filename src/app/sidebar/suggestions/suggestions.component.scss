@@ -17,7 +17,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .profile-container {
@@ -26,9 +26,9 @@
 }
 
 .profile-picture-container {
-  width: 32px;
-  height: 32px;
-  margin-right: 12px;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.75rem;
   img {
     width: 100%;
   }

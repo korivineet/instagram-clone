@@ -1,15 +1,15 @@
 footer {
   background-color: rgb(var(--ig-secondary-background));
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .footer-container {
-  padding-bottom: 56px;
+  padding-bottom: 3.5rem;
 }
 
 .top-footer {
-  padding-top: 24px;
+  padding-top: 1.5rem;
 
   .footer-links {
     display: flex;
@@ -18,8 +18,8 @@ footer {
 }
 
 .bottom-footer {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   display: flex;
   justify-content: center;
 
@@ -30,7 +30,7 @@ footer {
 }
 
 .link {
-  padding: 0 8px 12px 8px;
+  padding: 0 0.5rem 0.75rem 0.5rem;
 
   a {
     color: rgb(var(--ig-tertiary-text));
