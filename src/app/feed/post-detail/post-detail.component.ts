@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
-import { Post } from './../../services/feed/post.model';
+import { Post, PostComment } from './../../services/feed/post.model';
 import { FeedService } from './../../services/feed/feed.service';
+import { AccountService } from './../../services/account/account.service';
 
 @Component({
   selector: 'app-post-detail',
@@ -13,7 +15,11 @@ export class PostDetailComponent implements OnInit {
 
   post!: Post;
 
-  constructor(private route: ActivatedRoute, private feedService: FeedService) { }
+  constructor(
+    private route: ActivatedRoute, 
+    private feedService: FeedService,
+    private accountService: AccountService
+    ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
@@ -24,4 +30,15 @@ export class PostDetailComponent implements OnInit {
     });
   }
 
+  onToggleLike() {
+    this.post.likedByUser = !this.post.likedByUser;
+  }
+
+  onSubmitComment(ngForm: NgForm) {
+    const comment = ngForm.form.value.comment;
+    const account = this.accountService.getUser();
+    const newComment = new PostComment(account, comment);
+    this.feedService.addComment(this.post.id, newComment);
+    ngForm.reset();
+  }
 }

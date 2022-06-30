@@ -25,9 +25,11 @@
 
 .content-container {
   background-color: rgb(var(--ig-primary-background));
-  height: 100%;
   width: var(--media-info);
   flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .account-border {
@@ -94,6 +96,7 @@
 
   .caption {
     margin-left: 44px;
+
     p {
       margin: 0;
       font-size: 0.85rem;
@@ -102,9 +105,91 @@
 
   .timestamp {
     margin: 12px 0 12px 44px;
+
     time {
       font-size: 0.75rem;
       color: rgb(var(--ig-secondary-text));
+    }
+  }
+}
+
+.action-container {
+  border-top: 1px solid rgb(var(--post-separator));
+
+  .action-btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4px 6px;
+
+    .left,
+    .right {
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+      }
+    }
+  }
+
+  .likes-container {
+    padding: 0 12px 8px;
+    margin-bottom: 4px;
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+  }
+
+  .time-container {
+    padding: 0 12px 8px;
+    margin-bottom: 4px;
+
+    time {
+      font-size: 0.65rem;
+      color: rgb(var(--ig-secondary-text));
+    }
+  }
+}
+
+.add-comment-container {
+  border-top: 1px solid rgb(var(--post-separator));
+
+  form {
+    display: flex;
+    padding: 12px;
+
+    textarea {
+      background: none;
+      border: none;
+      resize: none;
+      color: rgb(var(--ig-primary-text));
+      font-size: 0.75rem;
+      width: 100%;
+    }
+
+    textarea:focus {
+      border: none;
+      outline: none;
+    }
+
+    button {
+      border: 0;
+      color: rgb(var(--ig-primary-button));
+      background-color: transparent;
+      font-weight: 600;
+    }
+
+    button:disabled,
+    button[disabled] {
+      opacity: 0.3;
+    }
+
+    button:hover {
+      cursor: pointer;
     }
   }
 }
