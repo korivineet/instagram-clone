@@ -12,6 +12,7 @@ import { FeedService } from './../../services/feed/feed.service';
   styleUrls: ['./create-post.component.scss']
 })
 export class CreatePostComponent implements OnInit {
+  imageLink!: string;
 
   constructor(
     private accountService: AccountService, 

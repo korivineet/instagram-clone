@@ -1,0 +1,43 @@
+form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0.25rem 0.5rem;
+
+  input {
+    padding: 0.25rem;
+  }
+}
+
+.button-container {
+  margin: 0.5rem;
+
+  button {
+    border: 0;
+    color: rgb(var(--ig-primary-button));
+    background-color: transparent;
+    font-weight: 600;
+  }
+
+  button:disabled,
+  button[disabled] {
+    opacity: 0.3;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+}
+
+.image-container {
+  padding: 0.75rem 2rem 0 0.5rem;
+  width: 50%;
+  img {
+    width: 100%;
+  }
+}

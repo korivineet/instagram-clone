@@ -1,17 +1,22 @@
 <div class="container">
   <form (ngSubmit)="onSubmitPost(f)" #f="ngForm">
-    <div>
+    <div class="form-control">
       <label for="imageLink">Image Link</label>
-      <input type="text" id="imageLink" name="imageLink" ngModel required>
+      <input type="text" id="imageLink" name="imageLink" [(ngModel)]="imageLink" ngModel required>
     </div>
+
   
-    <div>
+    <div class="form-control">
       <label for="caption">Caption</label>
       <input type="text" id="caption" name="caption" ngModel required>
     </div>
 
-    <div>
+    <div class="button-container">
       <button type="submit" [disabled]="!f.valid">Post</button>
     </div>
   </form>
+
+  <div class="image-container">
+    <img [src]="imageLink">
+  </div>
 </div>
