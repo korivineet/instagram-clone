@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { Post } from './../../services/feed/post.model';
+import { Post, PostComment } from './../../services/feed/post.model';
 import { FeedService } from './../../services/feed/feed.service';
+import { AccountService } from './../../services/account/account.service';
 
 @Component({
   selector: 'app-post',
@@ -13,7 +14,7 @@ export class PostComponent implements OnInit {
 
   @Input() post!: Post;
 
-  constructor(private feedService: FeedService) { }
+  constructor(private feedService: FeedService, private accountService: AccountService) { }
 
   ngOnInit(): void { }
 
@@ -27,7 +28,9 @@ export class PostComponent implements OnInit {
 
   onSubmitComment(ngForm: NgForm) {
     const comment = ngForm.form.value.comment;
-    this.feedService.addComment(this.post.id, comment);
+    const account = this.accountService.getUser();
+    const newComment = new PostComment(account, comment);
+    this.feedService.addComment(this.post.id, newComment);
     ngForm.reset();
   }
 }

@@ -19,9 +19,9 @@ export class MainFeedComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.posts = this.feedService.getPosts();
-    // this.postsSub = this.feedService.postChanged$.subscribe(posts => {
-    //   this.posts = posts;
-    // });
+    this.postsSub = this.feedService.postChanged$.subscribe(posts => {
+      this.posts = posts;
+    });
   }
 
   ngOnDestroy(): void {

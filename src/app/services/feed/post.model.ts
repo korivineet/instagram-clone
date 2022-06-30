@@ -6,7 +6,7 @@ export class Post {
   photoUrl: string;
   likes: number;
   caption: string;
-  comments: string[];
+  comments: PostComment[];
   timestamp: string;
   saved: boolean;
   likedByUser: boolean;
@@ -18,7 +18,7 @@ export class Post {
     photoUrl: string,
     likes: number,
     caption: string,
-    comments: string[],
+    comments: PostComment[],
     timestamp: string,
     saved: boolean,
     location?: string
@@ -36,7 +36,7 @@ export class Post {
   }
 }
 
-export class Comment {
+export class PostComment {
   poster: Account;
   content: string;
 
