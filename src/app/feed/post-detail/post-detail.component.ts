@@ -32,6 +32,11 @@ export class PostDetailComponent implements OnInit {
 
   onToggleLike() {
     this.post.likedByUser = !this.post.likedByUser;
+    if (this.post.likedByUser) {
+      this.feedService.toggleLikeCountOnLikeClicked(this.post.id, 'inc');
+    } else {
+      this.feedService.toggleLikeCountOnLikeClicked(this.post.id, 'dec');
+    }
   }
 
   onSubmitComment(ngForm: NgForm) {

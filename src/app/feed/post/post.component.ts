@@ -14,12 +14,20 @@ export class PostComponent implements OnInit {
 
   @Input() post!: Post;
 
-  constructor(private feedService: FeedService, private accountService: AccountService) { }
+  constructor(
+    private feedService: FeedService,
+    private accountService: AccountService
+  ) { }
 
   ngOnInit(): void { }
 
   onToggleLike() {
     this.post.likedByUser = !this.post.likedByUser;
+    if (this.post.likedByUser) {
+      this.feedService.toggleLikeCountOnLikeClicked(this.post.id, 'inc');
+    } else {
+      this.feedService.toggleLikeCountOnLikeClicked(this.post.id, 'dec');
+    }
   }
 
   onPhotoDblClicked() {

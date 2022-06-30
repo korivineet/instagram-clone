@@ -40,7 +40,7 @@ export class FeedService {
   }
 
   getPost(postId: string): Post {
-    const post = this.posts.find(p => p.id === postId) as Post;    
+    const post = this.posts.find(p => p.id === postId) as Post;
     return post;
   }
 
@@ -48,6 +48,21 @@ export class FeedService {
     const postIndex = this.posts.findIndex(p => p.id === postId);
     comment.content = comment.content.trim();
     this.posts[postIndex].comments.push(comment);
+    this.postChanged$.next(this.posts.slice());
+  }
+
+  /**
+  * @params postId
+  * @params type - value: 'dec' or 'inc' (for decrement or increment) 
+  * @return null
+  */
+  toggleLikeCountOnLikeClicked(postId: string, type: string) {
+    const postIndex = this.posts.findIndex(p => p.id === postId);
+    if (type === 'inc') {
+      this.posts[postIndex].likes = ++this.posts[postIndex].likes;
+    } else {
+      this.posts[postIndex].likes = --this.posts[postIndex].likes;
+    }
     this.postChanged$.next(this.posts.slice());
   }
 }
