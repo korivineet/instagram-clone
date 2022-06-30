@@ -1,1 +1,42 @@
-<p>{{ post | json }}</p>
+<div class="post-container">
+  <div class="post-image-container">
+    <img src="{{ post.photoUrl }}" alt="">
+  </div>
+
+  <div class="content-container">
+    <div class="account-border">
+      <div class="account-container">
+        <div class="photo">
+          <a routerLink="/{{ post.account.username }}">
+            <img src="{{ post.account.profilePictureUrl }}" alt="">
+          </a>
+        </div>
+        <div class="username">
+          <a routerLink="/{{ post.account.username }}">
+            <p>{{ post.account.username }}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="caption-account-container">
+      <div class="account">
+        <div class="photo">
+          <a routerLink="/{{ post.account.username }}">
+            <img src="{{ post.account.profilePictureUrl }}" alt="">
+          </a>
+        </div>
+        <div class="username">
+          <a routerLink="/{{ post.account.username }}">
+            <p>{{ post.account.username }}</p>
+          </a>
+        </div>
+      </div>
+      <div class="caption">
+        <p>{{ post.caption }}</p>
+      </div>
+      <div class="timestamp">
+        <time>{{ post.timestamp }}</time>
+      </div>
+    </div>
+  </div>

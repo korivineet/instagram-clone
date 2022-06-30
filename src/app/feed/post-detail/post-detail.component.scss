@@ -1,0 +1,110 @@
+@import 'variables';
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 935px;
+  margin: 0 auto;
+  background-color: rgb(var(--ig-primary-background));
+  border: 1px solid rgb(var(--ig-elevated-separator));
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+@media only screen and (min-width: $screen-post-detail) {
+  .post-container {
+    flex-direction: row;
+  }
+}
+
+.post-image-container {
+  img {
+    width: 100%;
+  }
+}
+
+.content-container {
+  background-color: rgb(var(--ig-primary-background));
+  height: 100%;
+  width: var(--media-info);
+  flex: 0 0 auto;
+}
+
+.account-border {
+  border-bottom: 1px solid rgb(var(--post-separator));
+}
+
+.account-container {
+  display: flex;
+  align-items: center;
+  margin: 8px 4px 8px 12px;
+
+  .photo {
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .username {
+    margin-left: 12px;
+
+    a {
+      color: rgb(var(--ig-primary-text));
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.caption-account-container {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 4px 8px 12px;
+
+  .account {
+    display: flex;
+    align-items: center;
+
+    .photo {
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .username {
+      margin-left: 12px;
+
+      a {
+        color: rgb(var(--ig-primary-text));
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .caption {
+    margin-left: 44px;
+    p {
+      margin: 0;
+      font-size: 0.85rem;
+    }
+  }
+
+  .timestamp {
+    margin: 12px 0 12px 44px;
+    time {
+      font-size: 0.75rem;
+      color: rgb(var(--ig-secondary-text));
+    }
+  }
+}
