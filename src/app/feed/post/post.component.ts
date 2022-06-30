@@ -31,7 +31,15 @@ export class PostComponent implements OnInit {
   }
 
   onPhotoDblClicked() {
+    if (this.post.likedByUser) {
+      return;
+    }
     this.post.likedByUser = true;
+    if (this.post.likedByUser) {
+      this.feedService.toggleLikeCountOnLikeClicked(this.post.id, 'inc');
+    } else {
+      this.feedService.toggleLikeCountOnLikeClicked(this.post.id, 'dec');
+    }
   }
 
   onSubmitComment(ngForm: NgForm) {

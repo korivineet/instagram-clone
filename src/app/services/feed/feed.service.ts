@@ -65,4 +65,9 @@ export class FeedService {
     }
     this.postChanged$.next(this.posts.slice());
   }
+
+  addNewPost(post: Post) {
+    this.posts.unshift(post);
+    this.postChanged$.next(this.posts.slice());
+  }
 }

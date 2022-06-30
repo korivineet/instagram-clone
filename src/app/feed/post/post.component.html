@@ -42,8 +42,8 @@
     </div>
   </div>
 
-  <div class="likes-container">
-    <p>{{ post.likes }} likes</p>
+  <div class="likes-container" *ngIf="post.likes > 0">
+    <p>{{ post.likes }} like<span *ngIf="post.likes > 1">s</span></p>
   </div>
 
   <div class="caption-container">

@@ -9,6 +9,7 @@ import { StoriesComponent } from './stories/stories.component';
 import { FeedComponent } from './feed.component';
 import { PostComponent } from './post/post.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { CreatePostComponent } from './create-post/create-post.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
     MainFeedComponent,
     StoriesComponent,
     PostComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    CreatePostComponent
   ],
   imports: [
     CommonModule,
