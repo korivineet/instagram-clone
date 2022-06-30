@@ -42,7 +42,25 @@
       </div>
 
       <div class="comments-container">
-        <!-- {{ post.comments | json}} -->
+        <div *ngFor="let comment of post.comments">
+          <div class="account-container">
+            <div class="photo">
+              <a routerLink="/{{ comment.poster.username }}">
+                <img src="{{ comment.poster.profilePictureUrl }}" alt="">
+              </a>
+            </div>
+            <div class="username">
+              <p>
+                <a routerLink="/{{ comment.poster.username }}">
+                  {{ comment.poster.username }}
+                </a>
+                <span class="comment">
+                  {{ comment.content }}
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
