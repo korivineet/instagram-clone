@@ -15,12 +15,24 @@ export class CreatePostComponent implements OnInit {
   imageLink!: string;
 
   constructor(
-    private accountService: AccountService, 
+    private accountService: AccountService,
     private feedService: FeedService,
     private router: Router
-    ) { }
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  onFileChange(event: any) {
+    const reader = new FileReader();
+
+    if (event.target.files && event.target.files.length) {
+      const [file] = event.target.files;
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        this.imageLink = reader.result as string;
+      };
+    }
   }
 
   onSubmitPost(ngForm: NgForm) {
